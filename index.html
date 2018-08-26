@@ -23,6 +23,68 @@
 	<!-- Custom Scripts -->
 	<!-- <script src="js/custom.js" type="text/javascript"></script> -->
 
+	<!-- Mail Chimp Integration -->
+	<script src="https://cdn.rawgit.com/scdoshi/jquery-ajaxchimp/47c0beaa/jquery.ajaxchimp.min.js"></script>
+	<script>
+	  $(function(){
+	    $('#subscribe').ajaxChimp({
+	      url: '//snowcookiesports.us19.list-manage.com/subscribe/post?u=ea2e9138434546466b5c94792&amp;id=17e14516d7',
+	      callback: callbackFunction,
+	      language: 'custom'
+	    });
+
+	    //custom messages
+	    $.ajaxChimp.translations.custom = {
+	      'submit': 'Submitting...',
+	      0: 'Thank you for the subscription!',
+	      1: 'Please enter your email',
+	      2: 'An email address must contain a single @',
+	      3: 'The domain portion of the email address is invalid (the portion after the @: )',
+	      4: 'The username portion of the email address is invalid (the portion before the @: )',
+	      5: 'This email address looks fake or invalid. Please enter a real email address'
+	    }
+
+	    //js function on success
+	    function callbackFunction (resp) {
+	      if (resp.result === 'success') {
+	        $('input[name="subscribe-submit"]').attr('value', 'Check email').addClass('green');
+	      }
+	    }
+	  });
+	</script>
+	<style>
+	  .subscribe-message {
+	    display: block;
+	    font-family: "Source Sans Pro", sans-serif;
+	    font-size: 20px;
+	    max-width:462px;
+	    margin:0 auto;
+	    border-radius:4px;
+	          
+	    /* animation */  
+	    -webkit-transform:scale(0);
+	    transform:scale(0);
+	    opacity:0;
+	    max-height:0;
+	    padding:0;
+	    border-width:0;
+	    
+	    -webkit-transition:0.5s;
+	    transition:0.5s;
+	  }
+	  .subscribe-message a { font-weight:600; }
+	  .subscribe-message.valid,
+	  .subscribe-message.error {
+	    -webkit-transform:scale(1);
+	    transform:scale(1);
+	    max-height:132px;
+	    opacity:1;
+	    padding:14px 20px;
+	    border:2px solid;
+	    margin-top: 20px;
+	  }
+	</style>
+
 	<!-- Fonts and Material Icons -->
 	<link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,800|Montserrat:200|Montserrat:400|Material+Icons"/>
 	<style type="text/css">
@@ -839,16 +901,22 @@
       <div class="wrap">
       
         <div class="fix-10-12">
-          <h1 class="ae-1 big">Makuakeクラウドファンディング<br>間もなく開始!</h1>
-          <p class="hero ae-2 fix-9-12"><span class="opacity-8">While it was just a TV show, that little speech at the beginning of the original Star Trek show really did do a good job of capturing our feelings about space.</span></p>
-          <div class="margin-top-2">
-            <div class="ae-3"><p><span class="opacity-8">Start now and get <b>free bonus</b> on account</span></p></div>
-            <form class="slides-form" action="#" autocomplete="off">
-              <input type="email" class="input-12 ae-4 fromCenter" name="user-email" placeholder="Email" val=""/>
-              <input type="password" class="input-12 ae-5 fromCenter" name="user-password" placeholder="Password" val=""/>
-              <input type="password" class="input-12 ae-6 fromCenter" name="confirm-password" placeholder="Confirm the password" val=""/>
-              <button type="submit" class="button blue gradient ae-7 fromCenter" name="button">Get Started</button>
-            </form>
+          <h1 class="ae-1 big">まもなくプレオーダー受付開始!</h1>
+          <div class="margin-top-4">
+            <div class="ae-3"><p class="tiny opacity-8">この秋、日本での展開の第一歩として、クラウドファンディングプラットフォーム上でプレオーダー受注を開始予定です。ご支援いただいたお客様には、今シーズンからゲレンデでsnowcookieを楽しんでいただけるよう商品をお届けします。ユーザーの皆様が実際にゲレンデで滑走したデータを元に、より精度の高いAIスキーコーチングアルゴリズムの開発を進めていく計画です。</p></div>
+          </div>
+          <div class="margin-top-4">
+            <div class="ae-3　margin-top-8"><p><span class="tiny opacity-6">下記フォームよりメールアドレスをご登録いただいたお客様には、後日クラウドファンディング支援募集開始をお知らせさせていただきます</p></div>
+            <div>
+	            <!-- Be sure you keep this form layout as it is. You can change the rest -->
+	            <form class="slides-form ae-2 fix-4-12 done" id="subscribe" novalidate="true">
+	              <input type="email" value="" name="EMAIL" id="subscribe-email" placeholder="Your e-mail" class="wide">
+	              <button type="submit" value="" name="subscribe-submit" class="wide button blue gradient">Get Updates</button>
+	              <label for="subscribe-email" class="subscribe-message"></label>
+	            </form>
+          	</div>
+
+           
           </div>
         </div>
         
