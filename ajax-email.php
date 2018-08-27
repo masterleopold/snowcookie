@@ -1,15 +1,15 @@
 <?php
 
 /* SETTINGS */
-$recipient = "your.email@gmail.com";
-$subject = "New Message from Contact Form";
+$recipient = "yoichiro@snowcookiesports.com";
+$subject = "コンタクトフォームからの送信";
 
 if($_POST){
 
   /* DATA FROM HTML FORM */
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $message = $_POST['message'];
+  $name = $_POST['名前'];
+  $email = $_POST['メールアドレス'];
+  $message = $_POST['メッセージ'];
 //$phone = $_POST['phone'];
 
 
@@ -31,11 +31,11 @@ if($_POST){
   }
 
   /* MESSAGE TEMPLATE */
-  $mailBody = "Name: $name \n\r" .
-              "Email:  $email \n\r" .
-              "Subject:  $subject \n\r" .
+  $mailBody = "名前: $name \n\r" .
+              "メールアドレス:  $email \n\r" .
+              "タイトル:  $subject \n\r" .
 //            "Phone:  $phone \n\r" .
-              "Message: $message";
+              "メッセージ本文: $message";
 
   /* SEND EMAIL */
   mail($recipient, $emailSubject, $mailBody, $headers);
