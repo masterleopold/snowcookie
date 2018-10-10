@@ -34,25 +34,67 @@
 	  gtag('config', 'UA-124745798-1');
 	</script>
 
-	<!-- Facebook Pixel Code -->
+	<!-- Mail Chimp Integration -->
+	<script src="https://cdn.rawgit.com/scdoshi/jquery-ajaxchimp/47c0beaa/jquery.ajaxchimp.min.js"></script>
 	<script>
-	 !function(f,b,e,v,n,t,s)
-	 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-	 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-	 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version=‘2.0’;
-	 n.queue=[];t=b.createElement(e);t.async=!0;
-	 t.src=v;s=b.getElementsByTagName(e)[0];
-	 s.parentNode.insertBefore(t,s)}(window, document,‘script’,
-	 ’https://connect.facebook.net/en_US/fbevents.js');
-	 fbq(‘init’, ‘342931629784701’);
-	 fbq(‘track’, ‘PageView’);
+	  $(function(){
+	    $('#subscribe').ajaxChimp({
+	      url: '//snowcookiesports.us19.list-manage.com/subscribe/post?u=ea2e9138434546466b5c94792&amp;id=17e14516d7',
+	      callback: callbackFunction,
+	      language: 'custom'
+	    });
+
+	    //custom messages
+	    $.ajaxChimp.translations.custom = {
+	      'submit': 'Submitting...',
+	      0: 'ご登録ください有難うございます。後日通知ご連絡させていただきます',
+	      1: 'メールアドレスを入力してください',
+	      2: 'メールアドレスには@を含む必要があります',
+	      3: 'メールアドレスのドメインが適切ではありません',
+	      4: '@より前のメールアドレスが正しくありません',
+	      5: 'このメールアドレスは正しくありません。正しいメールアドレスを入力してください'
+	    }
+
+	    //js function on success
+	    function callbackFunction (resp) {
+	      if (resp.result === 'success') {
+	        $('input[name="subscribe-submit"]').attr('value', 'Check email').addClass('green');
+	      }
+	    }
+	  });
 	</script>
-	<noscript><img height=“1” width=“1" style=“display:none”
-	 src=“https://www.facebook.com/tr?id=342931629784701&ev=PageView&noscript=1
-	https://www.facebook.com/tr?id=342931629784701&ev=PageView&noscript=1
-	"
-	/></noscript>
-	<!-- End Facebook Pixel Code -->
+	<style>
+	  .subscribe-message {
+	    display: block;
+	    font-family: "Source Sans Pro", sans-serif;
+	    font-size: 20px;
+	    max-width:462px;
+	    margin:0 auto;
+	    border-radius:4px;
+	          
+	    /* animation */  
+	    -webkit-transform:scale(0);
+	    transform:scale(0);
+	    opacity:0;
+	    max-height:0;
+	    padding:0;
+	    border-width:0;
+	    
+	    -webkit-transition:0.5s;
+	    transition:0.5s;
+	  }
+	  .subscribe-message a { font-weight:600; }
+	  .subscribe-message.valid,
+	  .subscribe-message.error {
+	    -webkit-transform:scale(1);
+	    transform:scale(1);
+	    max-height:132px;
+	    opacity:1;
+	    padding:14px 20px;
+	    border:2px solid;
+	    margin-top: 20px;
+	  }
+	</style>
 
 	<!-- Fonts and Material Icons -->
 	<link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,800|Montserrat:200|Montserrat:400|Material+Icons"/>
@@ -279,7 +321,8 @@
       <li><a href="#about">snowcookieについて</a></li>
       <li><a href="#spec">機能･スペック</a></li>
       <li><a href="#setup">セットアップ</a></li>
-      <li><a href="#product">製品ラインナップ</a></li>
+      <li><a href="#pledge">CF支援プラン</a></li>
+      <li><a href="#form">プレオーダー通知登録</a></li>
       <li><a href="https://itunes.apple.com/jp/app/snowcookie-smart-ski-tracker/id1317036227?mt=8" target="_blank">App Store</a></li>
     </ul>
     <ul class="subMenu small ae-3">
@@ -714,59 +757,59 @@
 </div>
 
 <!-- Slide 15 -->
-<section data-title="製品ラインナップ" class="slide fade-6 kenBurns" id="product">
+<section data-title="支援プラン" class="slide fade-6 kenBurns" id="pledge">
   <div class="content">
     <div class="container">
       <div class="wrap">
       
         <div class="fix-12-12">
-          <h1 class="ae-1">製品ラインナップ</h1>
+          <h1 class="ae-1">クラウドファンディング支援プラン</h1>
           <ul class="grid grid-84 equal equalMobile ae-2 fromCenter">
             <li class="col-3-12 ae-3">
-              <h3>snowcookie<br>Swiss Black Editon</h3>
+              <h3>snowcookie<br>サポートプランA</h3>
               <div class="price ae-5"><span class="currency">¥</span>51,800</div>
               <div class="margin-top-3 margin-bottom-3 equalElement ae-6">
                 <ul class="p tiny">
                   <img class="ae-3 fromCenter margin-bottom-3 margin-top-1 done" src="assets/img/intheBox_all_BL@0,5x.png" height="158" alt="Swiss Black Edition">
-                  <li class="opacity-8">スマートスキーシステム<br>カラー：ブラック</li>
+                  <li class="opacity-8">スマートスキーシステム<br>Swiss Black Editon ×1</li>
                 </ul>
               </div>
-              <a href="https://www.amazon.co.jp/dp/B07G9HM48V" target="_blank" class="button blue  wide cropSides cropBottom ae-7">Amazonで購入</a>
+              <a href="#form" class="button blue  wide cropSides cropBottom ae-7">間もなく販売開始</a>
             </li>
             <li class="col-3-12 ae-4">
-              <h3>snowcookie<br>Yellow Editon</h3>
+              <h3>snowcookie<br>サポートプランB</h3>
               <div class="price ae-6"><span class="currency">¥</span>39,800</div>
               <div class="margin-top-3 margin-bottom-3 equalElement ae-7">
                 <ul class="p tiny">
                   <img class="ae-3 fromCenter margin-bottom-3 margin-top-1 done" src="assets/img/intheBox_allYEL_@0,5x.png" height="158" alt="Yellow Edition">
-                  <li class="opacity-8">スマートスキーシステム<br>カラー：イエロー</li>
+                  <li class="opacity-8">スマートスキーシステム<br>Yellow Editon ×1</li>
                 </ul>
               </div>
-              <a href="https://www.amazon.co.jp/dp/B07G9G565P" target="_blank" class="button blue  wide cropSides cropBottom ae-8">Amazonで購入</a>
+              <a href="#form" class="button blue  wide cropSides cropBottom ae-8">間もなく販売開始</a>
             </li>
             <li class="col-3-12 ae-5">
-              <h3>snowcookie<br>Swiss Black Editon</h3>
-              <div class="price ae-7"><span class="currency">¥</span>120,000</div>
-              <div class="margin-top-3 margin-bottom-3 equalElement ae-8">
-                <ul class="p tiny">
-                  <img class="ae-3 fromCenter margin-bottom-3 margin-top-1 done" src="assets/img/intheBox_allBL_suit@0,5x.png" height="158" alt="Yellow Edition">
-                  <li class="opacity-8">カラー：ブラック ×1</li>
-                  <li class="opacity-8">カスタムレーシングスーツ(Snowcookie用チェストポケット&iPhone用ポケット付き)</li>
-                </ul>
-              </div>
-              <a  class="button  wide cropSides cropBottom ae-9">間もなく販売開始</a>
-            </li>
-            <li class="col-3-12 ae-5">
-              <h3>snowcookie<br>Yellow Editon</h3>
+              <h3>snowcookie<br>サポートプランC</h3>
               <div class="price ae-7"><span class="currency">¥</span>108,000</div>
               <div class="margin-top-3 margin-bottom-3 equalElement ae-8">
                 <ul class="p tiny">
-                  <img class="ae-3 fromCenter margin-bottom-3 margin-top-1 done" src="assets/img/intheBox_allYEL_suit@0,5x.png" height="158" alt="Swiss Black Edition">
-                  <li class="opacity-8">カラー：イエロー ×1</li>
+                  <img class="ae-3 fromCenter margin-bottom-3 margin-top-1 done" src="assets/img/intheBox_allYEL_suit@0,5x.png" height="158" alt="Yellow Edition">
+                  <li class="opacity-8">Yellow Editon ×1</li>
                   <li class="opacity-8">カスタムレーシングスーツ(Snowcookie用チェストポケット&iPhone用ポケット付き)</li>
                 </ul>
               </div>
-              <a class="button wide cropSides cropBottom ae-9">間もなく販売開始</a>
+              <a href="#form" class="button blue  wide cropSides cropBottom ae-9">間もなく販売開始</a>
+            </li>
+            <li class="col-3-12 ae-5">
+              <h3>snowcookie<br>サポートプランD</h3>
+              <div class="price ae-7"><span class="currency">¥</span>120,000</div>
+              <div class="margin-top-3 margin-bottom-3 equalElement ae-8">
+                <ul class="p tiny">
+                  <img class="ae-3 fromCenter margin-bottom-3 margin-top-1 done" src="assets/img/intheBox_allBL_suit@0,5x.png" height="158" alt="Swiss Black Edition">
+                  <li class="opacity-8">Swiss Black Editon ×1</li>
+                  <li class="opacity-8">カスタムレーシングスーツ(Snowcookie用チェストポケット&iPhone用ポケット付き)</li>
+                </ul>
+              </div>
+              <a href="#form" class="button blue  wide cropSides cropBottom ae-9">間もなく販売開始</a>
             </li>
           </ul>
         </div> 
@@ -777,6 +820,37 @@
   <div class="background" style="background-image:url(assets/img/background/39913936_2147463812161139_8607010480025763840_n.png)"></div>
 </section>
 
+<!-- Slide 16 -->
+<section data-title="プレオーダー通知登録" id="form" class="slide fade-6 kenBurns">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+      
+        <div class="fix-10-12">
+          <h1 class="ae-1 big">まもなくプレオーダー受付開始！</h1>
+          <div class="margin-top-4">
+            <div class="ae-3"><p class="tiny opacity-8">この秋、日本での展開の第一歩として、クラウドファンディングプラットフォーム上でプレオーダー受注を開始予定です。ご支援いただいたお客様には、今シーズンからゲレンデでsnowcookieを楽しんでいただけるよう商品をお届けします。ユーザーの皆様が実際にゲレンデで滑走したデータを元に、より精度の高いAIスキーコーチングアルゴリズムの開発を進めていく計画です。</p></div>
+          </div>
+          <div class="margin-top-4">
+            <div class="ae-3　margin-top-8"><p><span class="tiny opacity-8">メールアドレスをご登録いただいたお客様には、後日クラウドファンディング支援募集開始時にご案内送信させていただきます</p></div>
+            <div>
+	            <!-- Be sure you keep this form layout as it is. You can change the rest -->
+	            <form class="slides-form ae-4 fix-4-12" id="subscribe" novalidate="true">
+	              <input type="email" value="" name="EMAIL" id="subscribe-email" placeholder="通知を受け取るメールアドレス" class="wide">
+	              <button type="submit" value="" name="subscribe-submit" class="wide button blue">プレオーダー開始通知を受け取る</button>
+	              <label for="subscribe-email" class="subscribe-message"></label>
+	            </form>
+          	</div>
+
+           
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(assets/img/background/147A6247.jpg)"></div>
+</section>
 
 <!-- Panel Bottom -->
 <nav class="panel bottom">
@@ -789,7 +863,8 @@
         <li><a href="#about">snowcookieについて</a></li>
         <li><a href="#spec">機能･スペック</a></li>
         <li><a href="#setup">セットアップ</a></li>
-        <li><a href="#product">製品ラインナップ</a></li>
+        <li><a href="#pledge">クラウドファンディング支援プラン</a></li>
+        <li><a href="#form">プレオーダー通知登録</a></li>
         <li class="cropRight"><a href="https://www.facebook.com/snowcookiejapan" class="trimRight" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
         <li class="cropRight"><a href="https://twitter.com/ridesnowcookie" class="trimRight" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
         <li class="cropRight"><a href="https://www.instagram.com/snowcookiejapan" class="trimRight" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#instagram"></use></svg></a></li>
