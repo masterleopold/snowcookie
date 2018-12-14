@@ -7,6 +7,7 @@
 
 	<!-- Page Title -->
 	<title>Snowcookie - AIスマートスキーシステム</title>
+	<meta name="description" content="スキー上達を加速し、楽しみ方をアップグレードする、3Dスキートラッカー" />
 
 	<!-- Compressed Styles -->
 	<link href="css/slides.min.css" rel="stylesheet" type="text/css">
@@ -34,67 +35,25 @@
 	  gtag('config', 'UA-124745798-1');
 	</script>
 
-	<!-- Mail Chimp Integration -->
-	<script src="https://cdn.rawgit.com/scdoshi/jquery-ajaxchimp/47c0beaa/jquery.ajaxchimp.min.js"></script>
+	<!-- Facebook Pixel Code -->
 	<script>
-	  $(function(){
-	    $('#subscribe').ajaxChimp({
-	      url: '//snowcookiesports.us19.list-manage.com/subscribe/post?u=ea2e9138434546466b5c94792&amp;id=17e14516d7',
-	      callback: callbackFunction,
-	      language: 'custom'
-	    });
-
-	    //custom messages
-	    $.ajaxChimp.translations.custom = {
-	      'submit': 'Submitting...',
-	      0: 'ご登録ください有難うございます。後日通知ご連絡させていただきます',
-	      1: 'メールアドレスを入力してください',
-	      2: 'メールアドレスには@を含む必要があります',
-	      3: 'メールアドレスのドメインが適切ではありません',
-	      4: '@より前のメールアドレスが正しくありません',
-	      5: 'このメールアドレスは正しくありません。正しいメールアドレスを入力してください'
-	    }
-
-	    //js function on success
-	    function callbackFunction (resp) {
-	      if (resp.result === 'success') {
-	        $('input[name="subscribe-submit"]').attr('value', 'Check email').addClass('green');
-	      }
-	    }
-	  });
+	 !function(f,b,e,v,n,t,s)
+	 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version=‘2.0’;
+	 n.queue=[];t=b.createElement(e);t.async=!0;
+	 t.src=v;s=b.getElementsByTagName(e)[0];
+	 s.parentNode.insertBefore(t,s)}(window, document,‘script’,
+	 ’https://connect.facebook.net/en_US/fbevents.js');
+	 fbq(‘init’, ‘342931629784701’);
+	 fbq(‘track’, ‘PageView’);
 	</script>
-	<style>
-	  .subscribe-message {
-	    display: block;
-	    font-family: "Source Sans Pro", sans-serif;
-	    font-size: 20px;
-	    max-width:462px;
-	    margin:0 auto;
-	    border-radius:4px;
-	          
-	    /* animation */  
-	    -webkit-transform:scale(0);
-	    transform:scale(0);
-	    opacity:0;
-	    max-height:0;
-	    padding:0;
-	    border-width:0;
-	    
-	    -webkit-transition:0.5s;
-	    transition:0.5s;
-	  }
-	  .subscribe-message a { font-weight:600; }
-	  .subscribe-message.valid,
-	  .subscribe-message.error {
-	    -webkit-transform:scale(1);
-	    transform:scale(1);
-	    max-height:132px;
-	    opacity:1;
-	    padding:14px 20px;
-	    border:2px solid;
-	    margin-top: 20px;
-	  }
-	</style>
+	<noscript><img height=“1” width=“1" style=“display:none”
+	 src=“https://www.facebook.com/tr?id=342931629784701&ev=PageView&noscript=1
+	https://www.facebook.com/tr?id=342931629784701&ev=PageView&noscript=1
+	"
+	/></noscript>
+	<!-- End Facebook Pixel Code -->
 
 	<!-- Fonts and Material Icons -->
 	<link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,800|Montserrat:200|Montserrat:400|Material+Icons"/>
@@ -307,7 +266,7 @@
 <!-- Panel Top #10 -->
 <nav class="panel top">
   <div class="sections">
-    <div class="left"><a href="#" title="Snowcookie"><svg style="width:180px;height:44px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg></a></div>
+    <div class="left"><a href="./index.html" title="Snowcookie"><svg style="width:180px;height:44px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg></a></div>
     <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="animated"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use></svg></span></div>
   </div>
 </nav>
@@ -316,19 +275,15 @@
 <nav class="sidebar animated blue" data-sidebar-id="animated">
   <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
   <div class="content">
-    <a href="#" class="logo ae-1"><svg width="140" height="36"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-icon"></use></svg></a>
+    <a href="index.html" class="logo ae-1"><svg width="140" height="36"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-icon"></use></svg></a>
     <ul class="mainMenu margin-top-3 ae-2">
-      <li><a href="#about">snowcookieについて</a></li>
-      <li><a href="#spec">機能･スペック</a></li>
-      <li><a href="#ambassador">アンバサダー</a></li>
-      <li><a href="#setup">セットアップ</a></li>
-      <li><a href="#pledge">CF支援プラン</a></li>
-      <li><a href="#form">プレオーダー通知登録</a></li>
-      <li><a href="https://itunes.apple.com/jp/app/snowcookie-smart-ski-tracker/id1317036227?mt=8" target="_blank">App Store</a></li>
+      <li><a href="#ambassador">アンバサダーについて</a></li>
+      <li><a href="#hirokimiku">栗山 太樹・未来</a></li>
+      <li><a href="#masahiro">吉田 勝大</a></li>
     </ul>
     <ul class="subMenu small ae-3">
-      <li class="opacity-8"><a href="./profile.html#team">チーム</a></li>
-      <li class="opacity-8"><a href="./profile.html#contact">コンタクト</a></li>
+      <li class="opacity-8"><a href="./index.html">ホーム</a></li>
+      <li class="opacity-8"><a href="./profile.html">プロフィール</a></li>
     </ul>
     <ul class="social ae-4">
       <li class="opacity-8"><a href="https://www.facebook.com/snowcookiejapan" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
@@ -339,352 +294,30 @@
   </div>
 </nav>
 
-<!-- Slide 1 -->
-<section data-title="snowcookieについて" id="about" class="slide fade-6 kenBurns">
+<!-- Slide -->
+<section data-title="アンバサダーについて" class="slide fade-6 kenBurns" id="ambassador">
   <div class="content">
     <div class="container">
       <div class="wrap">
       
-        <div class="fix-12-12">
-          <div class="fix-3-12">
-            <svg height="77" class="wide ae-1 fromCenter hidden"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg>
-          </div>
-          <div class="button play small white popupTrigger ae-2 fromCenter margin-top-6 margin-bottom-6" data-popup-id="9">
-            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use></svg>
-          </div>
-          <h1 class="ae-1"><span class="opacity-8">スキー上達を加速し、楽しみ方をアップグレードする<br><b>AIスマートスキーシステム</b> </span></h1>
-          <h3 class="ae-1"><span class="opacity-8">Unlock your inner Awesome!</span></h3>
-          
-        </div>
+        <div class="fix-7-12">
+          <h1 class="ae-1">snowcookie ambassador</h1>
+          <p class="ae-2"><span class="opacity-8">SAJナショナルデモンストレーターをはじめ、日本のトップスキーヤーの方々にアンバサダーとしてテスト協力・開発フィードバックをいただいております</span></p>
+        </div>  
         
       </div>
     </div>
   </div>
-  <div class="background" style="background-image:url(assets/img/background/147A6327-BL.jpg)"></div>
-</section>
-
-<!-- Popup Video -->
-<div class="popup autoplay" data-popup-id="9">
-  <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-          <div class="embedVideo popupContent">
-            <iframe src="https://www.youtube.com/embed/q_2ZAPPOMA8?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Slide 2 -->
-<section data-title="3Dトラッキング" class="slide fade-6 kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-      
-        <div class="fix-12-12">
-          <ul class="flex fixedSpaces verticalCenter reverse">
-            <li class="col-6-12 left middle">
-              <h1 class="ae-1 fromLeft">世界で唯一の<b>3Dスキートラッキング技術</b>で可視化</h1>
-              <p class="ae-2 fromLeft"><span class="opacity-8">3つのセンサータグデバイスが、あなたの技術レベルを正確に計測し技術向上をアシスト</span></p>
-
-            </li>
-            <li class="col-6-12 margin-bottom-3">
-              <img class="ae-4" width="405" src="assets/img/iphone-3d.png" alt="iPhones Thumbnail" data-action="zoom"/>
-            </li>
-          </ul>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/img/background/147A6389-1.jpg)"></div>
-</section>
-
-<!-- Slide 3 -->
-<section data-title="チャレンジ" class="slide fade-6 kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-      
-        <div class="fix-12-12">
-          <ul class="flex fixedSpaces verticalCenter reverse">
-            <li class="col-6-12 left middle">
-              <h1 class="ae-1 fromLeft">自分自身の<b>テクニックとスタイル</b>にチャレンジしよう</h1>
-              <p class="ae-2 fromLeft"><span class="opacity-8">自分の滑走記録を比較することで、毎日のスキー滑走クオリティを把握し、着実なレベルアップへ</span></p>
-            </li>
-            <li class="col-6-12 margin-bottom-3">
-              <img class="ae-4" width="805" src="assets/img/WHOLE_SET_iPhone-X-Mockup@1x.png" alt="iPhones Thumbnail" data-action="zoom"/>
-            </li>
-          </ul>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/img/background/snowcookie-68.jpg)"></div>
-</section>
-
-<!-- Slide 4 -->
-<section data-title="フィードバック･改善" class="slide fade-6 kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-      
-        <div class="fix-12-12">
-          <ul class="flex fixedSpaces verticalCenter reverse">
-            <li class="col-6-12 left middle">
-              <h1 class="ae-1 fromLeft">スキー体験の<b>さらなる探求、そして改善へ</b></h1>
-              <p class="ae-2 fromLeft"><span class="opacity-8">スマートフォンアプリを通して、AIアルゴリズムによるフィードバックを提供</span></p>
-            </li>
-            <li class="col-6-12 margin-bottom-3">
-              <div class="fix-4-12 center">
-                <ul class="slider clickable ae-1 fromAbove" data-slider-id="26">
-                  <li class="selected"><img src="assets/img/iphone-run.png" class="wide"/></li>
-                  <li><img src="assets/img/iphone-run2.png" class="wide" /></li>
-                </ul>
-                <ul class="controller dots ae-3 fromCenter" data-slider-id="26">
-                  <li class="dot selected"></li>
-                  <li class="dot"></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/img/background/147A1638-1-RecoveredBL_@0,5x.jpg"></div>
-</section>
-
-<!-- Slide 5 -->
-<section data-title="snowcookieにできること" class="slide fade-6 kenBurns" id="spec">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-          
-        <div class="fix-12-12">
-          <ul class="flex noSpaces verticalCenter">
-            <li class="col-6-12 margin-bottom-3">
-              <div class="fix-4-12 center">
-                <ul class="slider clickable ae-1 fromAbove" data-slider-id="2">
-                  <li class="selected"><img src="assets/img/iphone-run1.png" class="wide"/></li>
-                  <li><img src="assets/img/iphone-run3.png" class="wide" /></li>
-                  <li><img src="assets/img/iphone-run4.png" class="wide" /></li>
-                  <li><img src="assets/img/iphone-run5.png" class="wide" /></li>
-                  <li><img src="assets/img/iphone-run6.png" class="wide" /></li>
-                  <li><img src="assets/img/iphone-run7.png" class="wide" /></li>
-                  <li><img src="assets/img/iphone-run8.png" class="wide" /></li>
-                </ul>
-                <ul class="controller dots ae-3 fromCenter" data-slider-id="2">
-                  <li class="dot selected"></li>
-                  <li class="dot"></li>
-                  <li class="dot"></li>
-                  <li class="dot"></li>
-                  <li class="dot"></li>
-                  <li class="dot"></li>
-                  <li class="dot"></li>
-                </ul>
-              </div>
-            </li>
-            <li class="col-6-12 left">
-              <h1 class="ae-2">snowcookieにできること</h1>
-              <ul class="flex grid-61 later">
-                <li class="col-6-12 ae-4">
-                  <i class="material-icons">star_half</i>
-                  <h3>インサイト</h3>
-                  <p class="tiny opacity-8">カービング、スピード、ボディポジションなど多数の情報を計測</p>
-                </li>
-                <li class="col-6-12 ae-5">
-                  <i class="material-icons">tune</i>
-                  <h3>滑走分析</h3>
-                  <p class="tiny opacity-8">AIアルゴリズムが、スキー滑走の中で上達したポイントを特定</p>
-                </li>
-                <li class="col-6-12 ae-6">
-                  <i class="material-icons">ac_unit</i>
-                  <h3>シミュレーション</h3>
-                  <p class="tiny opacity-8">あなたの滑走技術とスタイルを、3Dマップとともに可視化</p>
-                </li>
-                <li class="col-6-12 ae-7">
-                  <i class="material-icons">timeline</i>
-                  <h3>プログレス</h3>
-                  <p class="tiny opacity-8">改善可能なポイントを各セッション、ラン、ターン単位で取得</p>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/img/background/snowcookie-82r.jpg"></div>
-</section>
-
-<!-- Slide 6 -->
-<section data-title="紹介ムービー" class="slide fade-6 kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-        
-        <div class="fix-11-12">
-          <h1 class="cropBottom ae-1 fromCenter">
-            unlock
-            <span class="button play small white popupTrigger button-7" data-popup-id="7">
-              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use></svg>
-            </span>
-            your inner awesome!
-          </h1>
-        </div>
-      
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/img/background/snowcookie-bg.jpg)"></div>
-</section>
-
-<!-- Popup Video -->
-<div class="popup autoplay" data-popup-id="7">
-  <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-          <div class="embedVideo popupContent">
-            <iframe src="https://www.youtube.com/embed/q_2ZAPPOMA8?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Slide 7 -->
-<section data-title="コラボレーションパートナー" class="slide fade-6 kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-      
-        <div class="fix-8-12 toCenter">
-          <h1 class="ae-1">コラボレーションパートナー</h1>
-          <p class="ae-2"><span class="opacity-8">技術･製品開発や、新しいスキーライフの提案において、様々なパートナーとのコラボレーションを推進しています</span></p>
-
-          <!-- remove class tintLogos class to disable color change of the logo images -->
-          <ul class="flex grid-68 tintLogos equal equalMobile margin-top-6">
-            <li class="col-3-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2 margin-bottom-3">
-              <div class="table wide equalElement ae-3">
-                <div class="cell"><img width="84" src="assets/img/brand-68-audi.png" alt="Audi"/>
-                </div>
-              </div>
-            </li>
-            <li class="col-3-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2 margin-bottom-3">
-              <div class="table wide equalElement ae-4">
-                <div class="cell"><img width="96" src="assets/img/brand-68-redbull.png" alt="Redbull"/>
-                </div>
-              </div>
-            </li>
-            <li class="col-3-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2 margin-bottom-3">
-              <div class="table wide equalElement ae-5">
-                <div class="cell"><img width="84" src="assets/img/brand-68-intel.png" alt="Intel"/>
-                </div>
-              </div>
-            </li>
-            <li class="col-3-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2 margin-bottom-3">
-              <div class="table wide equalElement ae-6">
-                <div class="cell"><img width="126" src="assets/img/brand-68-ssf.png" alt="SwissStartupFactory"/>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-                
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/img/background/snowcookie-79.jpg)"></div>
-</section>
-
-<!-- Slide 8 -->
-<section data-title="スペック" class="slide fade-6 kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-          
-        <div class="fix-10-12">
-          <h1 class="ae-1">snowcookieの先進的スペック</h1>
-          <p class="ae-2"></p>
-          
-          <ul class="grid later equal left grid-65 margin-top-5">
-            <li class="col-6-12 ae-3 equalElement">
-              <i class="material-icons">3d_rotation</i>
-              <h3>3Dトラッキング</h3>
-              <p class="tiny opacity-8 fix-4-12 toLeft">ボディとスキー板の3つのセンサーが、あなたのiPhone内蔵センサーの機能を拡張します</p>
-            </li>
-            <li class="col-6-12 ae-4 equalElement">
-              <i class="material-icons">blur_on</i>
-              <h3>高精度計測</h3>
-              <p class="tiny opacity-8 fix-4-12 toLeft">先進モーショントラッキング技術が、1秒間に50回ものデータポイントを計測します</p>
-            </li>
-            <li class="col-6-12 ae-5 equalElement">
-              <i class="material-icons">filter_tilt_shift</i>
-              <h3>超軽量</h3>
-              <p class="tiny opacity-8 fix-4-12 toLeft">各センサーはわずか40gにも関わらず、どんなライドにも耐えられる耐久性があります</p>
-            </li>
-            <li class="col-6-12 ae-6">
-              <i class="material-icons">battery_charging_full</i>
-              <h3>ワイヤレス充電</h3>
-              <p class="tiny opacity-8 fix-4-12 toLeft">誘導充電式リチウムイオンバッテリーは一度の充電で2日以上の動作が可能です</p>
-            </li>
-          </ul>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/img/background/charger_147A2554-1_2@0,5x.png)"></div>
-</section>
-
-<!-- Slide 9 -->
-<section data-title="製品同梱物" class="slide fade-6 kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-        
-      
-        <div class="fix-8-12">
-          <h1 class="ae-1 fromCenter">製品に含まれるもの</h1>
-          <p class="ae-2">Snowcookieはウィンターシーズン中、あらゆる場所へ持ち歩いてお楽しみいただけるよう、軽量なトラベルキットの形でお届けします</p>
-      	</div>
-
-      	<div class="fix-10-12 ae-5">
-          <ul class="slider rounded margin-top-3 clickable ae-1" data-slider-id="22-12">
-        	<div class="slider rounded ae-1 slider margin-top-3 autoHeight clickable">
-          		<img class="margin-top-2 rounded" src="assets/img/Snowcookie_Unboxing_1920x1080.jpg" data-action="zoom" width="1028"/>
-        	</div>
-    	  </ul>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/img/background/147A1638-1-RecoveredBL_@0,5x.jpg)"></div>
+  <div class="background" style="background-image:url(assets/img/background/IMG_3028.JPG)"></div>
 </section>
 
 
-
-<!-- Slide 10 -->
-<section data-title="アンバサダー 栗山 太樹･未来" class="slide fade-6 kenBurns" id="ambassador">
+<!-- Slide -->
+<section data-title="栗山 太樹・未来" class="slide fade-6 kenBurns" id="hirokimiku">
   <div class="content">
     <div class="container">
       <div class="wrap">
-      
-        <div class="fix-10-12">
-          <h1 class="ae-1 fromLeft">snowcookie ambassador</h1>
-          <div class="ae-2 fromLeft">
-            <p class="opacity-8">SAJナショナルデモンストレーターをはじめ、日本のトップスキーヤーの方々にアンバサダーとしてテスト協力・開発フィードバックをいただいております</p>
-          </div>
-        </div>
-        
+              
         <div class="fix-12-12 margin-top-5">
           <ul class="flex grid-80 fixedSpaces equal reverse">
             <li class="col-6-12">
@@ -697,7 +330,7 @@
               </div>
             </li>
             <li class="col-6-12">
-              <div class="videoThumbnail rounded shadow wide cover equalElement popupTrigger ae-4 padding-14" data-popup-id="80-13" style="background:url(assets/img/miku39shimizu-2016-06-24T203A523A09-3.jpeg);"></div>
+              <div class="videoThumbnail rounded shadow wide cover equalElement popupTrigger ae-4 padding-14" data-popup-id="80-13" style="background:url(assets/img/IMG_0636.jpg);"></div>
             </li>
           </ul>
         </div>
@@ -705,7 +338,7 @@
       </div>
     </div>
   </div>
-  <div class="background" style="background-image:url(assets/img/background/img_slide_001.jpg)"></div>
+  <div class="background" style="background-image:url(assets/img/background/IMG_0637.jpg)"></div>
 </section>
 
 <!-- Popup Video -->
@@ -723,17 +356,11 @@
 </div>
 
 <!-- Slide 11 -->
-<section data-title="アンバサダー2" class="slide fade-6 kenBurns">
+<section data-title="吉田 勝大" class="slide fade-6 kenBurns"  id="masahiro">
   <div class="content">
     <div class="container">
       <div class="wrap">
       
-        <div class="fix-10-12">
-          <h1 class="ae-1 fromLeft">snowcookie ambassador</h1>
-          <div class="ae-2 fromLeft">
-            <p class="opacity-8">SAJナショナルデモンストレーターをはじめ、日本のトップスキーヤーの方々にアンバサダーとしてテスト協力・開発フィードバックをいただいております</p>
-          </div>
-        </div>
         
         <div class="fix-12-12 margin-top-5">
           <ul class="flex grid-80 fixedSpaces equal reverse">
@@ -742,12 +369,12 @@
                 <p class="tiny ae-5"><span class="tiny opacity-8">木曾路はすべて山の中である。あるところは岨づたいに行く崖の道であり、あるところは数十間の深さに臨む木曾川の岸であり、あるところは山の尾をめぐる谷の入り口である。一筋の街道はこの深い森林地帯を貫いていた。名高い桟も、蔦のかずらを頼みにしたような危い場処ではなくなって、徳川時代の末にはすでに渡ることのできる橋であった。</span></p>
                 <div class="margin-top-5 ae-6">
                   <h3>吉田 勝大</h3>
-                  <p class="tiny opacity-8 cropBottom">Mt.石井スポーツプロスタッフ / M's Ski Salon代表, SAJデモンストレーター</p>
+                  <p class="tiny opacity-8 cropBottom">Mt.石井スポーツプロスタッフ / M's Ski Salon代表, SAJデモンストレーター / プロスキーヤー</p>
                 </div>
               </div>
             </li>
             <li class="col-6-12">
-              <div class="videoThumbnail rounded shadow wide cover equalElement popupTrigger ae-4 padding-14" data-popup-id="80-13" style="background:url(assets/img/2006939291F20668.JPG);"></div>
+              <div class="videoThumbnail rounded shadow wide cover equalElement popupTrigger ae-4 padding-14" data-popup-id="80-13" style="background:url(assets/img/masa_small.JPG);"></div>
             </li>
           </ul>
         </div>
@@ -755,7 +382,7 @@
       </div>
     </div>
   </div>
-  <div class="background" style="background-image:url(assets/img/background/IMG_1336.jpg)"></div>
+  <div class="background" style="background-image:url(assets/img/background/00ba48_8d05d32e67524b18946ac666f5b950a1_mv2_d_4566_3044_s_4_2.jpg)"></div>
 </section>
 
 <!-- Popup Video -->
@@ -772,254 +399,19 @@
   </div>
 </div>
 
-<!-- Slide 12 -->
-<section data-title="アンバサダー3" class="slide fade-6 kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-      
-        <div class="fix-10-12">
-          <h1 class="ae-1 fromLeft">snowcookie ambassador</h1>
-          <div class="ae-2 fromLeft">
-            <p class="opacity-8">SAJナショナルデモンストレーターをはじめ、日本のトップスキーヤーの皆様にアンバサダーとしてテスト協力・開発フィードバックをいただいております</p>
-          </div>
-        </div>
-        
-        <div class="fix-12-12 margin-top-5">
-          <ul class="flex grid-80 fixedSpaces equal reverse">
-            <li class="col-6-12">
-              <div class="box-80 padding-4 equalElement left ae-3 rounded">
-                <p class="tiny ae-5"><span class="tiny opacity-8">木曾路はすべて山の中である。あるところは岨づたいに行く崖の道であり、あるところは数十間の深さに臨む木曾川の岸であり、あるところは山の尾をめぐる谷の入り口である。一筋の街道はこの深い森林地帯を貫いていた。名高い桟も、蔦のかずらを頼みにしたような危い場処ではなくなって、徳川時代の末にはすでに渡ることのできる橋であった。</span></p>
-                <div class="margin-top-5 ae-6">
-                  <h3>大越 龍之介</h3>
-                  <p class="tiny opacity-8 cropBottom">東急リゾートサービス, ワールドカップレーサー</p>
-                </div>
-              </div>
-            </li>
-            <li class="col-6-12">
-              <div class="videoThumbnail rounded shadow wide cover equalElement popupTrigger ae-4 padding-14" data-popup-id="80-13" style="background:url(assets/img/origin_1.jpg);"></div>
-            </li>
-          </ul>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/img/background/Solden2.jpg)"></div>
-</section>
-
-<!-- Popup Video -->
-<div class="popup autoplay" data-popup-id="80-13">
-  <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-          <div class="embedVideo popupContent">
-            <iframe src="https://www.youtube.com/embed/5axSkeMwioQ?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Slide 13 -->
-<section data-title="セットアップ" class="slide fade-6 kenBurns" id="setup">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-      
-        <div class="fix-12-12">
-          <h1 class="ae-1 fromLeft">snowcookieセットアップ</h1>
-          <p class="ae-2 fromLeft"><span class="opacity-8">snowcookieのセットアップは直感的で簡単に行うことができます</span></p>
-          <div class="videoThumbnail margin-bottom-6 noShadow noTint ae-3 popupTrigger" data-popup-id="87-16">
-            <img width="722" src="assets/img/iphone-81.png" alt="Keyboard"/>
-          </div>
-          <ul class="grid fixedSpaces left box-87 equal equalMobile" >
-            <li class="col-4-12 col-tablet-1-2 col-phone-1-1 equalElement margin-top-1 ae-5 fromCenter">
-             <h3>スキー板へのマウンター取付</h3>
-             <p class="tiny opacity-8">お持ちのスキー板のビンディング前部に、粘着テープ付きマウンターを貼り付け</p>
-            </li>
-            <li class="col-4-12 col-tablet-1-2 col-phone-1-1 equalElement margin-top-1 ae-6 fromCenter">
-             <h3>アプリインストール&ペアリング</h3>
-             <p class="tiny opacity-8">AppStoreからアプリをダウンロードし、Bluetoothでタグデバイスとペアリング</p>
-            </li>
-            <li class="col-4-12 col-tablet-1-2 col-phone-1-1 equalElement margin-top-1 ae-7 fromCenter">
-             <h3>タグ装着とキャリブレーション	</h3>
-             <p class="tiny opacity-8">ゲレンデ上でタグデバイスをスキー板にセットし、キャリブレーションしたら準備完了</p>
-            </li>
-          </ul>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/img/background/147A1766.jpg)"></div>
-</section>
-
-<!-- Popup Video -->
-<div class="popup autoplay" data-popup-id="87-16">
-  <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-          <div class="embedVideo popupContent">
-            <iframe src="https://www.youtube.com/embed/aWvkPgfK4zk?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Slide 14 -->
-<section data-title="アプリの使い方" class="slide fade-6 kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-      
-        <div class="fix-12-12 left">
-          <div class="fix-6-12 toLeft">
-            <h1 class="margin-bottom-3 ae-1 fromLeft">iPhoneアプリの使い方</h1>
-            <p class="opacity-8 ae-1 margin-bottom-5">snowcookie iOSアプリは、カービングやテクニック、ボディポジションなど多数のスキー滑走関連パラメータを正確に計測します</p>
-            <div class="popupTrigger ae-3 fromRight relative margin-top-3" data-popup-id="86-17">
-                <span class="button play white button-86 absolute">
-                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use></svg>
-                </span>
-                <div class="text-86"><h6 class="uppercase">ビデオガイドを見る</h6><p class="tiny opacity-8">snowcookieアプリの使い方 (2:00)</div>
-              </div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/img/background/baca_new_set@0,5x.png)"></div>
-</section>
-
-<!-- Popup Video -->
-<div class="popup autoplay" data-popup-id="86-17">
-  <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-          <div class="embedVideo popupContent">
-            <iframe src="https://www.youtube.com/embed/WE0tXORyhb8?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Slide 15 -->
-<section data-title="支援プラン" class="slide fade-6 kenBurns" id="pledge">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-      
-        <div class="fix-12-12">
-          <h1 class="ae-1">クラウドファンディング支援プラン</h1>
-          <ul class="grid grid-84 equal equalMobile ae-2 fromCenter">
-            <li class="col-3-12 ae-3">
-              <h3>snowcookie<br>サポートプランA</h3>
-              <div class="price ae-5"><span class="currency">¥</span>51,800</div>
-              <div class="margin-top-3 margin-bottom-3 equalElement ae-6">
-                <ul class="p tiny">
-                  <img class="ae-3 fromCenter margin-bottom-3 margin-top-1 done" src="assets/img/intheBox_all_BL@0,5x.png" height="158" alt="Swiss Black Edition">
-                  <li class="opacity-8">スマートスキーシステム<br>Swiss Black Editon ×1</li>
-                </ul>
-              </div>
-              <a href="#form" class="button blue  wide cropSides cropBottom ae-7">間もなく販売開始</a>
-            </li>
-            <li class="col-3-12 ae-4">
-              <h3>snowcookie<br>サポートプランB</h3>
-              <div class="price ae-6"><span class="currency">¥</span>39,800</div>
-              <div class="margin-top-3 margin-bottom-3 equalElement ae-7">
-                <ul class="p tiny">
-                  <img class="ae-3 fromCenter margin-bottom-3 margin-top-1 done" src="assets/img/intheBox_allYEL_@0,5x.png" height="158" alt="Yellow Edition">
-                  <li class="opacity-8">スマートスキーシステム<br>Yellow Editon ×1</li>
-                </ul>
-              </div>
-              <a href="#form" class="button blue  wide cropSides cropBottom ae-8">間もなく販売開始</a>
-            </li>
-            <li class="col-3-12 ae-5">
-              <h3>snowcookie<br>サポートプランC</h3>
-              <div class="price ae-7"><span class="currency">¥</span>108,000</div>
-              <div class="margin-top-3 margin-bottom-3 equalElement ae-8">
-                <ul class="p tiny">
-                  <img class="ae-3 fromCenter margin-bottom-3 margin-top-1 done" src="assets/img/intheBox_allYEL_@0,5x.png" height="158" alt="Yellow Edition">
-                  <li class="opacity-8">Yellow Editon ×1</li>
-                  <li class="opacity-8">カスタムレーシングスーツ(Snowcookie用チェストポケット&iPhone用ポケット付き)</li>
-                </ul>
-              </div>
-              <a href="#form" class="button blue  wide cropSides cropBottom ae-9">間もなく販売開始</a>
-            </li>
-            <li class="col-3-12 ae-5">
-              <h3>snowcookie<br>サポートプランD</h3>
-              <div class="price ae-7"><span class="currency">¥</span>120,000</div>
-              <div class="margin-top-3 margin-bottom-3 equalElement ae-8">
-                <ul class="p tiny">
-                  <img class="ae-3 fromCenter margin-bottom-3 margin-top-1 done" src="assets/img/intheBox_all_BL@0,5x.png" height="158" alt="Swiss Black Edition">
-                  <li class="opacity-8">Swiss Black Editon ×1</li>
-                  <li class="opacity-8">カスタムレーシングスーツ(Snowcookie用チェストポケット&iPhone用ポケット付き)</li>
-                </ul>
-              </div>
-              <a href="#form" class="button blue  wide cropSides cropBottom ae-9">間もなく販売開始</a>
-            </li>
-          </ul>
-        </div> 
-        
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/img/background/39913936_2147463812161139_8607010480025763840_n.png)"></div>
-</section>
-
-<!-- Slide 16 -->
-<section data-title="プレオーダー通知登録" id="form" class="slide fade-6 kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-      
-        <div class="fix-10-12">
-          <h1 class="ae-1 big">まもなくプレオーダー受付開始！</h1>
-          <div class="margin-top-4">
-            <div class="ae-3"><p class="tiny opacity-8">この秋、日本での展開の第一歩として、クラウドファンディングプラットフォーム上でプレオーダー受注を開始予定です。ご支援いただいたお客様には、今シーズンからゲレンデでsnowcookieを楽しんでいただけるよう商品をお届けします。ユーザーの皆様が実際にゲレンデで滑走したデータを元に、より精度の高いAIスキーコーチングアルゴリズムの開発を進めていく計画です。</p></div>
-          </div>
-          <div class="margin-top-4">
-            <div class="ae-3　margin-top-8"><p><span class="tiny opacity-8">メールアドレスをご登録いただいたお客様には、後日クラウドファンディング支援募集開始時にご案内送信させていただきます</p></div>
-            <div>
-	            <!-- Be sure you keep this form layout as it is. You can change the rest -->
-	            <form class="slides-form ae-4 fix-4-12" id="subscribe" novalidate="true">
-	              <input type="email" value="" name="EMAIL" id="subscribe-email" placeholder="通知を受け取るメールアドレス" class="wide">
-	              <button type="submit" value="" name="subscribe-submit" class="wide button blue">プレオーダー開始通知を受け取る</button>
-	              <label for="subscribe-email" class="subscribe-message"></label>
-	            </form>
-          	</div>
-
-           
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/img/background/147A6247.jpg)"></div>
-</section>
 
 <!-- Panel Bottom -->
 <nav class="panel bottom">
   <div class="sections desktop">
     <div class="left">
       <a href="https://itunes.apple.com/jp/app/snowcookie-smart-ski-tracker/id1317036227?mt=8" target="_blank" class="button hollow"><img src="assets/img/appstore.jpg" width="160" height="60"/></a>
+      <img class="button hollow" src="assets/img/swissmade-2_white.png" height="60" target="_blank">
     </div>
     <div class="right">
       <ul class="menu uppercase trim">
-        <li><a href="#about">snowcookieについて</a></li>
-        <li><a href="#spec">機能･スペック</a></li>
-        <li><a href="#ambassador">アンバサダー</a></li>
-        <li><a href="#setup">セットアップ</a></li>
-        <li><a href="#pledge">クラウドファンディング支援プラン</a></li>
-        <li><a href="#form">プレオーダー通知登録</a></li>
+        <li><a href="#ambassador">アンバサダーについて</a></li>
+        <li><a href="#hirokimiku">栗山 太樹・未来</a></li>
+        <li><a href="#masahiro">吉田 勝大</a></li>
         <li class="cropRight"><a href="https://www.facebook.com/snowcookiejapan" class="trimRight" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
         <li class="cropRight"><a href="https://twitter.com/ridesnowcookie" class="trimRight" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
         <li class="cropRight"><a href="https://www.instagram.com/snowcookiejapan" class="trimRight" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#instagram"></use></svg></a></li>
