@@ -41,6 +41,10 @@
     align-items: flex-end;  
   }
 
+  &.horizontalCenter {
+    justify-content: center;
+  }
+
   &.reverse {
     flex-wrap:wrap-reverse;
   }
