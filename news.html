@@ -39,6 +39,68 @@
 	  gtag('config', 'UA-124745798-1');
 	</script>
 
+	<!-- Mail Chimp Integration -->
+	<script src="https://raw.github.com/scdoshi/jquery-ajaxchimp/master/jquery.ajaxchimp.js"></script>
+	<script>
+	  $(function(){
+	    $('#subscribe').ajaxChimp({
+	      url: '//snowcookiesports.us19.list-manage.com/subscribe/post?u=ea2e9138434546466b5c94792&amp;id=17e14516d7',
+	      callback: callbackFunction,
+	      language: 'custom'
+	    });
+
+	    //custom messages
+	    $.ajaxChimp.translations.custom = {
+	      'submit': 'Submitting...',
+	      0: 'ご登録ください有難うございます。後日通知ご連絡させていただきます',
+	      1: 'メールアドレスを入力してください',
+	      2: 'メールアドレスには@を含む必要があります',
+	      3: 'メールアドレスのドメインが適切ではありません',
+	      4: '@より前のメールアドレスが正しくありません',
+	      5: 'このメールアドレスは正しくありません。正しいメールアドレスを入力してください'
+	    }
+
+	    //js function on success
+	    function callbackFunction (resp) {
+	      if (resp.result === 'success') {
+	        $('input[name="subscribe-submit"]').attr('value', 'Check email').addClass('green');
+	      }
+	    }
+	  });
+	</script>
+	<style>
+	  .subscribe-message {
+	    display: block;
+	    font-family: "Source Sans Pro", sans-serif;
+	    font-size: 20px;
+	    max-width:462px;
+	    margin:0 auto;
+	    border-radius:4px;
+	          
+	    /* animation */  
+	    -webkit-transform:scale(0);
+	    transform:scale(0);
+	    opacity:0;
+	    max-height:0;
+	    padding:0;
+	    border-width:0;
+	    
+	    -webkit-transition:0.5s;
+	    transition:0.5s;
+	  }
+	  .subscribe-message a { font-weight:600; }
+	  .subscribe-message.valid,
+	  .subscribe-message.error {
+	    -webkit-transform:scale(1);
+	    transform:scale(1);
+	    max-height:132px;
+	    opacity:1;
+	    padding:14px 20px;
+	    border:2px solid;
+	    margin-top: 20px;
+	  }
+	</style>
+
 	<!-- Facebook Pixel Code -->
 	<script>
 	 !function(f,b,e,v,n,t,s)
@@ -400,6 +462,29 @@
   <div class="background" style="background-image:url(assets/img/background/147A6247.jpg)"></div>
 </section>
 
+<!-- Slide #13 -->
+<section class="slide fade-6 kenBurns">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+      
+        <div class="fix-8-12">
+          <h1 class="ae-1">Creativity is to think more efficiently</h1>
+          <p class="ae-2"><span class="opacity-8">So when a good idea comes, you know, part of my job is to move it around, just see what different people think, get people talking about&nbsp;it.</span></p>
+          <form class="slides-form" id="subscribe" novalidate="true">
+            <input type="email" class="ae-5 fromLeft input-13" value="" id="subscribe-email" name="EMAIL" placeholder="メールアドレス"/>
+            <button type="submit" class="button blue gradient ae-5 fromRight" name="subscribe-submit">ニュースレターを受信する</button>
+            <label for="subscribe-email" class="subscribe-message"></label>
+          </form>
+          
+
+        </div>
+                
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(assets/img/background/img-13.jpg)"></div>
+</section>
 
 
 <!-- Panel Bottom -->
